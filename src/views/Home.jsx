@@ -1,4 +1,4 @@
-import { fetchParks } from './services/natparks';
+import { fetchParks } from '../services/natparks';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
@@ -21,7 +21,10 @@ export default function Home() {
     <div>
       <p>hello i am home component</p>
       {parks.map((park) => (
-        <p key={park.id}>{park.name}</p>
+        <div key={park.id}>
+          <p>{park.fullName}</p>
+          <img src={park.images[0].url} />
+        </div>
       ))}
     </div>
   );
