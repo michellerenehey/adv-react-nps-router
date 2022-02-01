@@ -3,6 +3,7 @@ export async function fetchParks() {
     'https://developer.nps.gov/api/v1/parks?limit=10&api_key=cdzWVEMaCf1ENzBWkJIYssjstvgB1ppyGAwrdJCr'
   );
   const apiData = await response.json();
+  console.log(apiData);
   const data = apiData.data;
   const mungedData = data.map(({ id, url, fullName, description, activities, states, images }) => ({
     id,
@@ -14,6 +15,7 @@ export async function fetchParks() {
     images,
   }));
   return mungedData;
+  // console.log('mungedData');
 }
 
 export async function fetchParkById(id) {
