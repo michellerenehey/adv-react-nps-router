@@ -28,12 +28,12 @@ export default function ParkDetail() {
     history.push('/');
   }
   return (
-    <div>
+    <div className="ParkDetail">
       <h1>{fullName}</h1>
 
       {activities.map((activity) => {
         return (
-          <div key={activity.id}>
+          <div key={activity.id} className="activity">
             <p>{activity.name}</p>
           </div>
         );
