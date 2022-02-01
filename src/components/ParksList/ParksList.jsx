@@ -2,7 +2,6 @@ import './ParksList.css';
 import { Link } from 'react-router-dom';
 
 export default function ParksList({ parks }) {
-  console.log(parks);
   return (
     <div className="ParksList">
       {parks.map((park) => (

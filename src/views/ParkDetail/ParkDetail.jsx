@@ -2,6 +2,7 @@ import './ParkDetail.css';
 import { useEffect, useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { fetchParkById } from '../../services/natparks';
+import Park from '../../components/Park/Park';
 
 export default function ParkDetail() {
   const { parkId } = useParams();
@@ -19,26 +20,9 @@ export default function ParkDetail() {
   }, [parkId]);
 
   if (loading) return <p>Loading...</p>;
-  console.log(parkDetails);
-
-  const { activities, fullName } = parkDetails;
-  console.log(activities);
 
   function returnHome() {
     history.push('/');
   }
-  return (
-    <div className="ParkDetail">
-      <h1>{fullName}</h1>
-
-      {activities.map((activity) => {
-        return (
-          <div key={activity.id} className="activity">
-            <p>{activity.name}</p>
-          </div>
-        );
-      })}
-      <button onClick={returnHome}>Home</button>
-    </div>
-  );
+  return <Park parkDetails={parkDetails} returnHome={returnHome} />;
 }
