@@ -16,12 +16,6 @@ export async function fetchParks() {
   return mungedData;
 }
 
-// const mungedData = data.map(({ name, atractions, otherThings }) => ({
-//   name,
-//   attractions,
-//   otherThings,
-// }));
-
 // fetch park byID
 
 // fetch activities

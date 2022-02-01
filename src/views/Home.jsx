@@ -1,5 +1,6 @@
 import { fetchParks } from '../services/natparks';
 import { useEffect, useState } from 'react';
+import ParksList from '../components/ParksList/ParksList';
 
 export default function Home() {
   const [parks, setParks] = useState([]);
@@ -17,15 +18,5 @@ export default function Home() {
 
   if (loading) return <p>Loading...</p>;
 
-  return (
-    <div>
-      <p>hello i am home component</p>
-      {parks.map((park) => (
-        <div key={park.id}>
-          <p>{park.fullName}</p>
-          <img src={park.images[0].url} />
-        </div>
-      ))}
-    </div>
-  );
+  return <ParksList parks={parks} />;
 }
