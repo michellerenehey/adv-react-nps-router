@@ -16,3 +16,5 @@ function App() {
 }
 
 export default App;
+
+// add a /park/:id Route, which when you click it brings up the activites?
