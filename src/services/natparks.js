@@ -16,6 +16,14 @@ export async function fetchParks() {
   return mungedData;
 }
 
+export async function fetchParkById(id) {
+  const response = await fetch(
+    `https://developer.nps.gov/api/v1/parks?api_key=cdzWVEMaCf1ENzBWkJIYssjstvgB1ppyGAwrdJCr&id=${id}`
+  );
+  const { data } = await response.json();
+  return data[0];
+}
+
 // fetch park byID
 
 // fetch activities

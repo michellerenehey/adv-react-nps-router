@@ -10,7 +10,7 @@ export default function Home() {
     const fetchData = async () => {
       const data = await fetchParks();
       setParks(data);
-      console.log(data);
+      // console.log(data);
       setLoading(false);
     };
     fetchData();
