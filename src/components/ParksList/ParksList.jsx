@@ -1,4 +1,4 @@
-import React from 'react';
+import './ParksList.css';
 
 export default function ParksList({ parks }) {
   return (
@@ -7,7 +7,7 @@ export default function ParksList({ parks }) {
       {parks.map((park) => (
         <div key={park.id}>
           <p>{park.fullName}</p>
-          <img src={park.images[0].url} />
+          <img className="park-image" src={park.images[0].url} />
         </div>
       ))}
     </div>
