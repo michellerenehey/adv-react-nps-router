@@ -1,3 +1,23 @@
 img {
   width: 25vw;
 }
+
+.ParksList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.park-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(46, 139, 86, 0.701);
+  border: 5px solid orange;
+  border-radius: 15px;
+  width: 40vw;
+  padding: 15px;
+  margin: 5px;
+}
