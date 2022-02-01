@@ -1,12 +1,13 @@
 import './ParkDetail.css';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { fetchParkById } from '../../services/natparks';
 
 export default function ParkDetail() {
   const { parkId } = useParams();
   const [parkDetails, setParkDetails] = useState([]);
   const [loading, setLoading] = useState(true);
+  const history = useHistory();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,6 +24,9 @@ export default function ParkDetail() {
   const { activities, fullName } = parkDetails;
   console.log(activities);
 
+  function returnHome() {
+    history.push('/');
+  }
   return (
     <div>
       <h1>{fullName}</h1>
@@ -34,6 +38,7 @@ export default function ParkDetail() {
           </div>
         );
       })}
+      <button onClick={returnHome}>Home</button>
     </div>
   );
 }

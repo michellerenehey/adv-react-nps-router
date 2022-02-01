@@ -1,4 +1,5 @@
 import './ParksList.css';
+import { Link } from 'react-router-dom';
 
 export default function ParksList({ parks }) {
   return (
@@ -6,7 +7,9 @@ export default function ParksList({ parks }) {
       {parks.map((park) => (
         <div key={park.id} className="park-card">
           <p>{park.fullName}</p>
-          <img className="park-image" src={park.images[0].url} />
+          <Link to={`/park/${park.id}`}>
+            <img className="park-image" src={park.images[0].url} />
+          </Link>
         </div>
       ))}
     </div>
