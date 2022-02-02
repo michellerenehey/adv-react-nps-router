@@ -1,6 +1,9 @@
-export async function fetchParks() {
+export async function fetchParks(setStartPage) {
+  const params = new URLSearchParams();
+  params.set('start', setStartPage);
+
   const response = await fetch(
-    'https://developer.nps.gov/api/v1/parks?limit=10&api_key=cdzWVEMaCf1ENzBWkJIYssjstvgB1ppyGAwrdJCr&'
+    `https://developer.nps.gov/api/v1/parks?limit=10&api_key=cdzWVEMaCf1ENzBWkJIYssjstvgB1ppyGAwrdJCr&${params.toString()}`
   );
   const apiData = await response.json();
   const data = apiData.data;

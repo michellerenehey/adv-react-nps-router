@@ -1,7 +1,7 @@
 import './ParksList.css';
 import { Link } from 'react-router-dom';
 
-export default function ParksList({ parks }) {
+export default function ParksList({ parks, handleNext, handlePrev }) {
   return (
     <div className="ParksList">
       {parks.map((park) => (
@@ -13,6 +13,8 @@ export default function ParksList({ parks }) {
           </Link>
         </div>
       ))}
+      <button onClick={handleNext}>Next</button>
+      <button onClick={handlePrev}>Previous</button>
     </div>
   );
 }
