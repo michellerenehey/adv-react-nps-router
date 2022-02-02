@@ -1,6 +1,6 @@
-import { fetchParks } from '../services/natparks';
+import { fetchParks } from '../../services/natparks';
 import { useEffect, useState } from 'react';
-import ParksList from '../components/ParksList/ParksList';
+import ParksList from '../../components/ParksList/ParksList';
 
 export default function Home() {
   const [parks, setParks] = useState([]);

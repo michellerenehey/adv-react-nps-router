@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from './views/Home';
+import Home from './views/Home/Home';
 import ParkDetail from './views/ParkDetail/ParkDetail';
 
 function App() {
@@ -22,5 +22,3 @@ function App() {
 }
 
 export default App;
-
-// add a /park/:id Route, which when you click it brings up the activites?
