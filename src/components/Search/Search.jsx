@@ -1,13 +1,15 @@
-// this component is only the search so far, maybe expanding when possible...
+import React from 'react';
 
-export default function Search(query, setQuery, handleSubmit) {
+export default function Search({ query, setQuery }) {
+  console.log('QUERY IN SEARCH', { query });
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label>Search for a park:</label>
-        <input value={query} onChange={(e) => setQuery(e.target.value)} />
-        <button>Submit</button>
-      </form>
-    </div>
+    <input
+      type="text"
+      placeholder="search park here"
+      value={query}
+      onChange={(e) => {
+        setQuery(e.target.value);
+      }}
+    />
   );
 }
