@@ -1,3 +1,5 @@
+// this component is only the search so far, maybe expanding when possible...
+
 export default function Search(query, setQuery, handleSubmit) {
   return (
     <div>
