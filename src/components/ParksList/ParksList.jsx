@@ -2,9 +2,9 @@ import './ParksList.css';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function ParksList({ parks, handleNext, handlePrev }) {
-  const { search } = useLocation();
-  const searching = new URLSearchParams(search);
-  const searchedPark = searching.get('q');
+  // const { search } = useLocation();
+  // const searching = new URLSearchParams(search);
+  // const searchedPark = searching.get('q');
 
   return (
     <div className="ParksList">
