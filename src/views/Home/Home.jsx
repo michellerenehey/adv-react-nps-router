@@ -15,8 +15,10 @@ export default function Home() {
       setParks(data);
       setLoading(false);
     };
-    fetchData();
-  }, [startPage, query]);
+    if (loading) {
+      fetchData();
+    }
+  }, [loading, startPage, query]);
 
   const handleNext = () => {
     setStartPage((prevState) => prevState + 11);
@@ -32,7 +34,7 @@ export default function Home() {
 
   return (
     <>
-      <Search query={query} setQuery={setQuery} />
+      <Search query={query} setQuery={setQuery} setLoading={setLoading} />
       <ParksList parks={parks} handleNext={handleNext} handlePrev={handlePrev} />
     </>
   );
