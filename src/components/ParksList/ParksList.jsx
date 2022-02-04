@@ -1,11 +1,8 @@
 import './ParksList.css';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function ParksList({ parks, handleNext, handlePrev }) {
-  // const { search } = useLocation();
-  // const searching = new URLSearchParams(search);
-  // const searchedPark = searching.get('q');
-
+  // console.log('PARKS', parks);
   return (
     <div className="ParksList">
       {parks.map((park) => (
