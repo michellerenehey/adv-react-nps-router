@@ -5,8 +5,8 @@ import { fetchParks } from '../src/services/natparks';
 
 function App() {
   const [parks, setParks] = useState([]);
-  // const [parkDetails, setParkDetails] = useSate([]);
 
+  // GRAB DATA FROM API
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchParks();
@@ -14,19 +14,13 @@ function App() {
     };
     fetchData();
   }, []);
-  console.log(parks);
 
   // PARK DETAILS
   function ParkDetails() {
     const { parkId } = useParams();
-    console.log('parkId', parkId);
-    console.log('hello');
-    const { url, path } = useRouteMatch();
-    // console.log(url, path);
 
     const park = parks.find((item) => item.id === parkId);
     const parkActivities = park.activities;
-    console.log(parkActivities);
 
     return (
       <>
@@ -39,8 +33,6 @@ function App() {
   // LIST OF PARKS
   function ParkList() {
     const { url, path } = useRouteMatch();
-    console.log('URL PARKLIST', url);
-    console.log('PATH PARKLIST', path);
 
     return (
       <>
