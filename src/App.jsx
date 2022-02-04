@@ -36,17 +36,19 @@ function App() {
 
     return (
       <>
-        {parks.map(({ fullName, id }) => {
+        {parks.map(({ fullName, id, images }) => {
           return (
-            <p key={id}>
-              <Link to={`${url}/${id}`}>{fullName}</Link>
-            </p>
+            <div className="parkCard" key={id}>
+              <p>
+                <Link to={`${url}/${id}`}>{fullName}</Link>
+              </p>
+              <img src={images[0].url} />
+            </div>
           );
         })}
         <Route path={`${path}/:parkId`}>
           <ParkDetails />
         </Route>
-        ;
       </>
     );
   }
