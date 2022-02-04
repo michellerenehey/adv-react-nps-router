@@ -3,6 +3,9 @@ import { BrowserRouter, Route, useRouteMatch, Link, useParams } from 'react-rout
 import { useEffect, useState } from 'react';
 import { fetchParks } from '../src/services/natparks';
 
+import Home from './components/Home/Home';
+import ParkList from './components/ParkList/ParkList';
+
 function App() {
   const [parks, setParks] = useState([]);
 
@@ -31,50 +34,26 @@ function App() {
     );
   }
   // LIST OF PARKS
-  function ParkList() {
-    const { url, path } = useRouteMatch();
-
-    return (
-      <>
-        {parks.map(({ fullName, id, images }) => {
-          return (
-            <div className="parkCard" key={id}>
-              <p>
-                <Link to={`${url}/${id}`}>{fullName}</Link>
-              </p>
-              <img src={images[0].url} />
-            </div>
-          );
-        })}
-        <Route path={`${path}/:parkId`}>
-          <ParkDetails />
-        </Route>
-      </>
-    );
-  }
 
   // HOME COMPONENT
-  function Home() {
-    return <h1>National Parks Are Cool</h1>;
-  }
 
   // ROOT ROUTE
   return (
     <div className="App">
       <BrowserRouter>
-        <div>
-          <p>
+        <div className="header">
+          <div>
             <Link to="/">Home</Link>
-          </p>
-          <p>
+          </div>
+          <div>
             <Link to="/parks">Park List</Link>
-          </p>
+          </div>
         </div>
         <Route exact path="/">
           <Home />
         </Route>
         <Route path="/parks">
-          <ParkList />
+          <ParkList parks={parks} />
         </Route>
       </BrowserRouter>
     </div>

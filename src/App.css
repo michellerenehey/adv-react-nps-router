@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+
 .App {
   display: flex;
   flex-direction: column;
@@ -6,6 +8,7 @@
   /* flex-wrap: wrap; */
   background-color: brown;
   height: 100%;
+  font-family: 'Nova Mono', monospace;
 }
 
 .parkCard {
@@ -21,4 +24,21 @@
 }
 .parkCard > img {
   height: 100px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: seagreen;
+  width: 100vw;
+  height: 10vh;
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: brown;
+  text-shadow: 1px 1px orange;
 }

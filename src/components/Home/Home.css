@@ -1,9 +1,7 @@
-.ParkDetail {
+.Home {
+  text-shadow: 1px 1px orange;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: seagreen;
-  padding: 10px;
-  margin: 20px;
 }
