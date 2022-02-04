@@ -1,8 +1,9 @@
-.App {
+.ParkDetail {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: brown;
-  height: 100%;
+  background-color: seagreen;
+  padding: 10px;
+  margin: 20px;
 }
