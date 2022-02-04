@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Route, useRouteMatch, Link, useParams } from 'react-router-dom';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { fetchParks } from '../src/services/natparks';
 
@@ -19,20 +19,7 @@ function App() {
   }, []);
 
   // PARK DETAILS
-  function ParkDetails() {
-    const { parkId } = useParams();
 
-    const park = parks.find((item) => item.id === parkId);
-    const parkActivities = park.activities;
-
-    return (
-      <>
-        {parkActivities.map(({ name, id }) => {
-          return <p key={id}>{name}</p>;
-        })}
-      </>
-    );
-  }
   // LIST OF PARKS
 
   // HOME COMPONENT

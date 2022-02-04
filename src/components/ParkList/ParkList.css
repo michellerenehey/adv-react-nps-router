@@ -1,0 +1,32 @@
+.ParkList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.parkCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: seagreen;
+  border-radius: 10px;
+  width: 25vw;
+  height: 25vh;
+  margin: 10px;
+  color: brown;
+}
+.parkCard > img {
+  height: 100px;
+}
+
+.name-link {
+  text-shadow: none;
+  color: black;
+}
+
+hr {
+  color: white;
+}

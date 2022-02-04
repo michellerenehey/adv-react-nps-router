@@ -1,0 +1,4 @@
+.ParkDetails {
+  display: flex;
+  flex-direction: column;
+}

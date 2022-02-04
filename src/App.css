@@ -11,21 +11,6 @@
   font-family: 'Nova Mono', monospace;
 }
 
-.parkCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: seagreen;
-  border-radius: 10px;
-  width: 25vw;
-  height: 25vh;
-  margin: 10px;
-}
-.parkCard > img {
-  height: 100px;
-}
-
 .header {
   display: flex;
   flex-direction: row;
@@ -37,6 +22,7 @@
   font-size: 25px;
 }
 
+.header,
 a {
   text-decoration: none;
   color: brown;
