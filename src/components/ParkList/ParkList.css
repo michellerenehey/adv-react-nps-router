@@ -27,6 +27,7 @@
   color: black;
 }
 
-hr {
+.hr {
   color: white;
+  width: 100vw;
 }

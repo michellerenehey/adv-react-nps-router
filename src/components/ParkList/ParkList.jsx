@@ -19,7 +19,7 @@ export default function ParkList({ parks }) {
           </div>
         );
       })}
-      <hr />;
+      <hr className="hr" />;
       <Route path={`${path}/:parkId`}>
         <ParkDetails parks={parks} />
       </Route>
