@@ -10,6 +10,7 @@ export default function ParkDetail() {
   const [loading, setLoading] = useState(true);
   const history = useHistory();
 
+  console.log('PARKID', parkId);
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchParkById(parkId);

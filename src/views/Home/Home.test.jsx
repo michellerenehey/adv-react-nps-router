@@ -5,7 +5,7 @@ import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 
 // create mock data
-const mockResponse = [
+export const mockResponse = [
   {
     id: '77E0D7F0-1942-494A-ACE2-9004D2BDC59E',
     url: 'https://www.nps.gov/abli/index.htm',
